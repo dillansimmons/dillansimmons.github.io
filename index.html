@@ -10,6 +10,15 @@
 
 
     
+    <!-- Google Analytics -->
+    <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-37457048-2', 'auto');
+    ga('require', 'autotrack');
+    ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <script async src='javascript/autotrack.js'></script>
   </head>
   <body>
     
@@ -34,8 +43,8 @@
   </section>
   <section class="footer">
     <div class="contact">
-        <h2 class="title">Lets talk about something?</h2>
-        <form id="contactform" method="POST">
+        <h2 class="title">Contact</h2>
+        <form id="contactform" action="//formspree.io/dillan.simmons@gmail.com" method="POST">
           <div class="form-item name-input">
               <label>Name</label>
               <input type="text" id="name" name="name" required="">
@@ -47,6 +56,7 @@
           <div class="form-item item">  
               <label>Message</label>
               <textarea id="message" name="message" required=""></textarea>
+              <input type="hidden" name="_next" value="/contactThanks.html" />
           </div>
           <div class="form-item button-panel">
             <button data-event-category="contact" data-event-action="send-message" id="button" class="button">Send Message</button>
