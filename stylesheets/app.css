@@ -128,7 +128,7 @@ a {
   a:hover {
     color: #2a5ab2; }
 
-span a, span p, p a {
+span a, span p, p a, label {
   font-family: "Vollkorn", serif; }
 
 span a:hover, p a:hover {
