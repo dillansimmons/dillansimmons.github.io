@@ -11,11 +11,9 @@
     <script>
     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
     ga('create', 'UA-37457048-2', 'auto');
-    ga('require', 'autotrack');
     ga('send', 'pageview');
     </script>
     <script async src='https://www.google-analytics.com/analytics.js'></script>
-    <script async src='javascript/autotrack.js'></script>
   </head>
   <body> 
     <div class="container">
@@ -30,42 +28,42 @@
       </header>
       <section class="about">
           <div class="plots">
-              <figcaption>
+              <button>
                 <img src="./images/plots/plot11.jpg" alt="Plotted : Tight Rounds Overlap Blue">
-              </figcaption>
-              <figcaption>
+              </button>
+              <button>
                 <img src="./images/plots/plot10.jpg" alt="Plotted : Tight Rounds">
-              </figcaption>
-              <figcaption>
+              </button>
+              <button>
                 <img src="./images/plots/plot9.jpg" alt="Plotted : Offcut Pegboard">
-              </figcaption>
-              <figcaption>
+              </button>
+              <button>
                 <img src="./images/plots/plot8.jpg" alt="Plotted : The Sun">
-              </figcaption>
-              <figcaption>
+              </button>
+              <button>
                 <img src="./images/plots/plot7.jpg" alt="Plotted : Wrapping">
-              </figcaption>
-              <figcaption>
+              </button>
+              <button>
                 <img src="./images/plots/plot6.jpg" alt="Plotted : Teen kicks">
-              </figcaption>
-              <figcaption>
+              </button>
+              <button>
                 <img src="./images/plots/plot5.jpg" alt="Plotted : 3 Rings (in gold)">
-              </figcaption>
-              <figcaption>
+              </button>
+              <button>
                 <img src="./images/plots/plot4.jpg" alt="Plotted : 3 Rings (in silver)">
-              </figcaption>
-              <figcaption>
+              </button>
+              <button>
                 <img src="./images/plots/plot3.jpg" alt="Plotted : 3 Rings (RGB)">
-              </figcaption>
-              <figcaption>
+              </button>
+              <button>
                 <img src="./images/plots/plot1.jpg" alt="Plotted : Blob">
-              </figcaption>
-              <figcaption>
+              </button>
+              <button>
                 <img src="./images/plots/plot2.jpg" alt="Plotted : 5 Rings">
-              </figcaption>
-              <figcaption>
+              </button>
+              <button>
                 <img src="./images/plots/plot1-5.jpg" alt="Plotted : Power Invaders">
-              </figcaption>
+              </button>
             </div>
       </section>
       <section class="footer">
@@ -104,6 +102,36 @@
         </footer>
       </section>
     </div>
-      <script src="javascripts/app.js"></script>
+    <!-- MODAL -->
+    <div class="modal-wrapper">
+      <div class="modal">
+        <div class="head">
+          <button class="btn-close">
+            <span >Close button</span>
+          </button>
+        </div>
+        <img/>
+      </div>
+    </div>
+    <script>
+        const modalWrapper = document.querySelector('.modal-wrapper');
+        const pageWrapper = document.querySelector('.container');
+        const closeButton = document.querySelector('.btn-close');
+        const modalImg = modalWrapper.querySelector('img');
+        const modalButtons = Array.from(document.querySelectorAll('.plots button'));
+        modalButtons.forEach(button => {
+          button.onclick = () => {
+            const imageURl = button.querySelector('img').src;
+            modalWrapper.classList.add('open');
+            pageWrapper.classList.add('blur');
+            closeButton.focus();
+            modalImg.src = imageURl;
+          }
+        })
+        closeButton.onclick = () => {
+            modalWrapper.classList.remove('open');
+            pageWrapper.classList.remove('blur');
+        }
+    </script>
   </body>
 </html>
