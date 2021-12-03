@@ -171,7 +171,7 @@ hr {
   height: 1px;
   border: 0;
   border-top: #EFEFEF 1px solid;
-  margin: 3.2em 0;
+  margin: 1.2em 0;
   padding: 0; }
 
 .strikeout {
@@ -303,11 +303,21 @@ label {
   position: relative;
   padding: 1rem 15px;
   padding-top: 8rem;
-  font-family: "Josefin Slab", serif;
+  background: #f5f8fa;
+}
+
+.copyright, .small-text {
   font-size: 12px;
   line-height: 1.75em;
-  color: #b1b6b8;
-  background: #f5f8fa; }
+}
+
+.small-text {
+  color: #343B3E;
+}
+
+.copyright {
+  font-family: "Josefin Slab", serif;
+}
 
 /* blob spin on about icon */
 @keyframes spin {
