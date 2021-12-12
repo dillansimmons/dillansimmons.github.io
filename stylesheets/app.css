@@ -411,6 +411,7 @@ img.blob {
 }
 
 .modal{
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   height:auto;
   display:block;
   position:relative;
@@ -435,14 +436,15 @@ img.blob {
 
 .head{
   height:16px;
-  padding:1em 5%;
+  padding:1em;
   overflow:hidden;
-  background:#343B3E;
+  background: #fff;
+  border-bottom: 3px solid #343B3E;
 }
 
 .btn-close{
-  width:16px;
-  height:16px;
+  width:22px;
+  height:14px;
   display:block;
   float:right;
   background: transparent;
@@ -457,10 +459,10 @@ img.blob {
 
 .btn-close::before, .btn-close::after{
   content:'';
-  width:16px;
-  height:6px;
+  width:22px;
+  height:3px;
   display:block;
-  background:#fff;
+  background: #343B3E;
 }
 
 .btn-close::before{
@@ -471,7 +473,7 @@ img.blob {
 }
 
 .btn-close::after{
-  margin-top:-6px;
+  margin-top:-3px;
   -webkit-transform:rotate(-45deg);
   -moz-transform:rotate(-45deg);
   -o-transform:rotate(-45deg);
