@@ -355,7 +355,7 @@ img.blob {
   margin: 35px; }
 
 .plots {
-  column-count: 4;
+  column-count: 2;
   column-gap: 10px;
 }
 
