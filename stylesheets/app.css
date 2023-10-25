@@ -319,6 +319,10 @@ label {
   font-family: "Josefin Slab", serif;
 }
 
+.less-margin {
+  margin: 0 0 1.75em 0;
+}
+
 /* blob spin on about icon */
 @keyframes spin {
   from {
